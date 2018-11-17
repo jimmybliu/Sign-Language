@@ -113,22 +113,27 @@ def recognize():
 			if cv2.contourArea(contour) > 10000:
 				x1, y1, w1, h1 = cv2.boundingRect(contour)
 				save_img = thresh[y1:y1+h1, x1:x1+w1]
-				
+
 				if w1 > h1:
 					save_img = cv2.copyMakeBorder(save_img, int((w1-h1)/2) , int((w1-h1)/2) , 0, 0, cv2.BORDER_CONSTANT, (0, 0, 0))
 				elif h1 > w1:
 					save_img = cv2.copyMakeBorder(save_img, 0, 0, int((h1-w1)/2) , int((h1-w1)/2) , cv2.BORDER_CONSTANT, (0, 0, 0))
-				
+
 				pred_probab, pred_class = keras_predict(model, save_img)
 				print(pred_class, pred_probab)
-				
+
 				if pred_probab*100 > 80:
 					text = get_pred_text_from_db(pred_class)
 					print(text)
-		blackboard = np.zeros((480, 640, 3), dtype=np.uint8)
+
+		width, height = img.shape[0], img.shape[1]
+
+		blackboard = np.zeros((width, height, 3), dtype=np.uint8)
 		splitted_text = split_sentence(text, 2)
 		put_splitted_text_in_blackboard(blackboard, splitted_text)
 		#cv2.putText(blackboard, text, (30, 200), cv2.FONT_HERSHEY_TRIPLEX, 1.3, (255, 255, 255))
+
+
 		cv2.rectangle(img, (x,y), (x+w, y+h), (0,255,0), 2)
 		res = np.hstack((img, blackboard))
 		cv2.imshow("Recognizing gesture", res)
@@ -136,5 +141,5 @@ def recognize():
 		if cv2.waitKey(1) == ord('q'):
 			break
 
-keras_predict(model, np.zeros((50, 50), dtype=np.uint8))		
+keras_predict(model, np.zeros((50, 50), dtype=np.uint8))
 recognize()

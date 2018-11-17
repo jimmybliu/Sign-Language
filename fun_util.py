@@ -197,7 +197,7 @@ def calculator_mode(cam):
 							Thread(target=say_text, args=(pred_text,)).start()
 							second += pred_text
 							calc_text += pred_text
-							count_same_frames = 0	
+							count_same_frames = 0
 
 		if count_clear_frames == 30:
 			first, second, operator, pred_text, calc_text = '', '', '', '', ''
@@ -275,7 +275,10 @@ def text_mode(cam):
 				Thread(target=say_text, args=(word, )).start()
 			text = ""
 			word = ""
-		blackboard = np.zeros((480, 640, 3), dtype=np.uint8)
+
+		img = cv2.resize(img, None, fx=0.5, fy=0.5, interpolation = cv2.INTER_LINEAR)
+		width, height = img.shape[0], img.shape[1]
+		blackboard = np.zeros((width, height, 3), dtype=np.uint8)
 		cv2.putText(blackboard, "Text Mode", (180, 50), cv2.FONT_HERSHEY_TRIPLEX, 1.5, (255, 0,0))
 		cv2.putText(blackboard, "Predicted text- " + text, (30, 100), cv2.FONT_HERSHEY_TRIPLEX, 1, (255, 255, 0))
 		cv2.putText(blackboard, word, (30, 240), cv2.FONT_HERSHEY_TRIPLEX, 2, (255, 255, 255))
@@ -316,5 +319,5 @@ def recognize():
 		else:
 			break
 
-keras_predict(model, np.zeros((50, 50), dtype = np.uint8))		
+keras_predict(model, np.zeros((50, 50), dtype = np.uint8))
 recognize()
