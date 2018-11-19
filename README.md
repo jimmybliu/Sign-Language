@@ -1,5 +1,14 @@
 <a href="https://docs.google.com/presentation/d/1bSwLkuxa2rCqwFcIObKta0hRjwVO7eEYmZ3gs1yWYdQ/edit?usp=sharing">Hack utilizing this sign-language repo to allow ASL speakers to use Amazon Alexa (by Sino Oulad Daoud)</a>
 
+## Files modified by Sino Oulad Daoud to make this gesture recognition repo work for the AlexaSL hack:
+- set_hand_hist.py
+- fun_util.py
+- gestures/ (replaced a few gestures that weren't needed)
+
+Project page coming soon. Please refer to <a href="https://docs.google.com/presentation/d/1bSwLkuxa2rCqwFcIObKta0hRjwVO7eEYmZ3gs1yWYdQ/edit?usp=sharing">these slides</a> until then for more information about the hack. 
+
+AlexaSL contributors: Sino Oulad Daoud, James Jung, Jeremey Liu at Sachacks 2018
+
 [![DOI](https://zenodo.org/badge/122105084.svg)](https://zenodo.org/badge/latestdoi/122105084)
 
 # Sign-Language
