@@ -1,3 +1,5 @@
+<a href="https://docs.google.com/presentation/d/1bSwLkuxa2rCqwFcIObKta0hRjwVO7eEYmZ3gs1yWYdQ/edit?usp=sharing">Hack utilizing this sign-language repo to allow ASL speakers to use Amazon Alexa (by Sino Oulad Daoud)</a>
+
 [![DOI](https://zenodo.org/badge/122105084.svg)](https://zenodo.org/badge/latestdoi/122105084)
 
 # Sign-Language
