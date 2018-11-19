@@ -9,6 +9,8 @@ Project page coming soon. Please refer to <a href="https://docs.google.com/prese
 
 AlexaSL contributors: Sino Oulad Daoud, James Jung, Jeremey Liu at Sachacks 2018
 
+Check out the original gesture recognition repo (by Saha, D.) instructions below if you want to build a project using the same technology! During the hackathon I used Google Computing Engine to run the training files.
+
 [![DOI](https://zenodo.org/badge/122105084.svg)](https://zenodo.org/badge/latestdoi/122105084)
 
 # Sign-Language
