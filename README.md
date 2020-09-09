@@ -8,7 +8,7 @@
 
 Project page coming soon. Please refer to <a href="https://docs.google.com/presentation/d/1bSwLkuxa2rCqwFcIObKta0hRjwVO7eEYmZ3gs1yWYdQ/edit?usp=sharing">these slides</a> until then for more information about the hack. 
 
-AlexaSL contributors: Sino Oulad Daoud, James Jung, Jeremey Liu at Sachacks 2018
+AlexaSL contributors: Sino Oulad Daoud, James Jung, Bohan (Jimmy) Liu at Sachacks 2018
 
 Check out the original gesture recognition repo (by Saha, D.) instructions below if you want to build a project using the same technology! During the hackathon I used Google Computing Engine to run the training files.
 
