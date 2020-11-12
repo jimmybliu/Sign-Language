@@ -16,6 +16,7 @@ Check out the original gesture recognition repo (by Saha, D.) instructions below
 
 # Sign-Language
 A very simple CNN project.
+Check out the presentation file here: https://docs.google.com/presentation/d/1bSwLkuxa2rCqwFcIObKta0hRjwVO7eEYmZ3gs1yWYdQ/edit?usp=sharing
 
 ## Note
 Simple-OpenCV-Calculator and this project are merged to one. Simple-OpenCV-Calculator will no longer be maintained.
